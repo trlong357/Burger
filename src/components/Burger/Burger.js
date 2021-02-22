@@ -5,10 +5,15 @@ import BurgerIngredient from "./BurgerIngredient/BurgerIngredient";
 const burger = (props) => {
   const transformedIngredients = Object.keys(props.ingredients).map((igKey) => {
     //Array() - create an array
+    {
+      console.log(igKey);
+    }
     return [...Array(props.ingredients[igKey])].map((_, i) => {
+      console.log(i);
       return <BurgerIngredient key={igKey + i} type={igKey} />;
     }); //[ , ]
   });
+  console.log(transformedIngredients);
   //keys method which extracts the key of a given object and turns that into an array
   return (
     <div className={classes.Burger}>
