@@ -18,7 +18,7 @@ const burger = (props) => {
     .reduce((arr, el) => {
       return arr.concat(el);
     }, []);
-  // reduce() - a built-in arr function
+  // reduce() - dùng để thực thi một hàm lên từng phần tử của mảng (từ trái sang phải) với một biến tích lũy để thu về một giá trị duy nhất.
 
   if (transformedIngredients.length === 0) {
     transformedIngredients = <p>Pls adding ingredients!!!</p>;
