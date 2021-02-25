@@ -77,6 +77,11 @@ class BurgerBuilder extends Component {
   orderSummaryHandler = () => {
     this.setState({ showOrderSummary: true });
   };
+
+  orderSummaryCancelHandler = () => {
+    this.setState({ showOrderSummary: false });
+  };
+
   render() {
     // console.log(
     //   "BurgerBuilder ingredients[salad]",
@@ -92,7 +97,10 @@ class BurgerBuilder extends Component {
     console.log("DisableInfo: ", disableInfo);
     return (
       <Aux>
-        <Modal show={this.state.showOrderSummary}>
+        <Modal
+          show={this.state.showOrderSummary}
+          modalClosed={this.orderSummaryCancelHandler}
+        >
           <OrderSummary ingredients={this.state.ingredients} />
         </Modal>
         <Burger ingredients={this.state.ingredients} />
