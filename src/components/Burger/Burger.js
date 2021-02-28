@@ -11,7 +11,7 @@ const burger = (props) => {
       // }
 
       return [...Array(props.ingredients[igKey])].map((_, i) => {
-        console.log(i);
+        // console.log(i);
         return <BurgerIngredient key={igKey + i} type={igKey} />;
       });
     })
@@ -24,7 +24,7 @@ const burger = (props) => {
     transformedIngredients = <p>Pls adding ingredients!!!</p>;
   }
 
-  console.log(transformedIngredients);
+  // console.log(transformedIngredients);
   //keys method which extracts the key of a given object and turns that into an array
   return (
     <div className={classes.Burger}>
